@@ -1,0 +1,17 @@
+name: 'open home page'
+
+on:
+  push:
+    branches: 
+      - master
+  schedule:
+    - cron: '0 17 * * *'
+
+jobs:
+  open_home:
+    runs-on: ubuntu-latest
+    steps:
+    - name: 'Checkout codes'
+      uses: actions/checkout@v2
+    - name: 'Open home page'
+      run: sh CnUnicom.sh ${{ secrets.USER }} ${{ secrets.PASS }}

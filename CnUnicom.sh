@@ -20,8 +20,7 @@ unicom_version=7.0402
 deviceId=$(shuf -i 123456789012345-987654321012345 -n 1)
 
 # 安卓手机端APP登录过的使用这个UA
-UA="Mozilla/5.0 (Linux; Android 6.0.1; oneplus a5010 Build/V417IR; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/52.0.2743.100 Mobile Safari/537.36; unicom{version:android@$unicom_version,desmobile:$
-};devicetype{deviceBrand:Oneplus,deviceModel:oneplus a5010}"
+UA="Mozilla/5.0 (Linux; Android 6.0.1; oneplus a5010 Build/V417IR; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/52.0.2743.100 Mobile Safari/537.36; unicom{version:android@$unicom_version,desmobile:$username};devicetype{deviceBrand:Oneplus,deviceModel:oneplus a5010}"
 
 # 苹果手机端APP登录过的使用这个UA
 #UA="ChinaUnicom4.x/176 CFNetwork/1121.2.2 Darwin/19.2.0"

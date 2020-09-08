@@ -14,4 +14,4 @@ jobs:
     - name: 'Checkout codes'
       uses: actions/checkout@v2
     - name: 'Open home page'
-      run: bash CnUnicom.sh ${{ secrets.USER }} ${{ secrets.PASS }}
+      run: bash CnUnicom.sh ${{ secrets.USER }} ${{ secrets.PASS }} ${{ secrets.APPID }}

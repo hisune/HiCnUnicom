@@ -11,6 +11,7 @@ alias curl='curl -m 10'
 # user info: change them to yours or use parameters instead.
 username="$1"
 password="$2"
+appid="$3"
 
 # 联通APP版本
 unicom_version=7.0402
@@ -19,7 +20,8 @@ unicom_version=7.0402
 deviceId=$(shuf -i 123456789012345-987654321012345 -n 1)
 
 # 安卓手机端APP登录过的使用这个UA
-UA="Mozilla/5.0 (Linux; Android 6.0.1; oneplus a5010 Build/V417IR; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/52.0.2743.100 Mobile Safari/537.36; unicom{version:android@$unicom_version,desmobile:$username};devicetype{deviceBrand:Oneplus,deviceModel:oneplus a5010}"
+UA="Mozilla/5.0 (Linux; Android 6.0.1; oneplus a5010 Build/V417IR; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/52.0.2743.100 Mobile Safari/537.36; unicom{version:android@$unicom_version,desmobile:$
+};devicetype{deviceBrand:Oneplus,deviceModel:oneplus a5010}"
 
 # 苹果手机端APP登录过的使用这个UA
 #UA="ChinaUnicom4.x/176 CFNetwork/1121.2.2 Darwin/19.2.0"
@@ -65,7 +67,7 @@ isRemberPwd=true
 &mobile=$(urlencode $crypt_username)
 &yw_code=
 &timestamp=$(date +%Y%m%d%H%M%S)
-&appId=$3
+&appId=$appid
 &keyVersion=1
 &deviceBrand=Oneplus
 &pip=10.0.$(shuf -i 1-255 -n 1).$(shuf -i 1-255 -n 1)
@@ -73,7 +75,8 @@ isRemberPwd=true
 &version=android%40$unicom_version
 &deviceModel=oneplus%20a5010
 &deviceOS=android6.0.1
-&deviceCode=$deviceId
+&deviceCode=$
+
 EOF
 
     # cookie
